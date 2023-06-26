@@ -1,12 +1,17 @@
+#importando a biblioteca os
 import os
+#var que recebe o nome do arquivo
 nome_arquivo = os.path.basename(__file__)
-
+#função main do projeto que inicia o painel do menu e chama os outros arquivos
 def main():
+    #importando os arquivos do projeto
     import ex1, ex2, ex3, ex4, ex5, ex6
+    #limpar a tela no windows e no linux
     try:
         os.system('cls')
     except:
         os.system('clear')
+    #painel
     print(nome_arquivo)
     print(
     """
@@ -37,6 +42,7 @@ def main():
         6 - Faça um programa que percorra duas listas e gere uma terceira sem elementos repetidos.
 
     """)
+    #input da resposta e chamada de cada exercício
     resp = input()
     if resp == '1':
         ex1.ex1()
@@ -50,5 +56,7 @@ def main():
         ex5.ex5()
     elif resp == '6':
         ex6.ex6()
+    #sempre retornar ao painel
     return main()
+#chamada a função main para iniciar o projeto
 main()

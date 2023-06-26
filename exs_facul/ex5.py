@@ -1,14 +1,18 @@
+#importando a biblioteca os
 import os
-from ex4 import maior, menor
+#var que recebe o nome do arquivo
 nome_arquivo = os.path.basename(__file__)
-
+#importando as funções "maior" e "menor" do ex4
+from ex4 import maior, menor
+#função que retorna a média de uma lista de números inteiros
 def media(lista):
     soma = 0
     for i in lista:
         soma = soma + i
     return soma / len(lista)
-
+#função main do arquivo ex5
 def ex5():
+    #limpar a tela no windows e no linux
     try:
         os.system('cls')
     except:
@@ -26,8 +30,10 @@ como a temperatura média, usando funções.\n
     print(f'A maior temperatura da lista é: {int(maior(lista))}')
     print(f'A média des temperaturas da lista é: {media(lista)}')
     input()
+    #retorna ao painel principal em main ou retorna ao código que acabou de executar
     resp = 0
     while resp != '1' and resp != '2':
+        #limpar a tela no windows e no linux
         try:
             os.system('cls')
         except:

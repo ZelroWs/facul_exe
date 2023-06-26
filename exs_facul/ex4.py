@@ -1,4 +1,6 @@
+#importando a biblioteca os
 import os
+#var que recebe o nome do arquivo
 nome_arquivo = os.path.basename(__file__)
 
 def maior(lista):
@@ -20,8 +22,9 @@ def menor(lista):
         if float(lista[i]) < menor:
             menor = lista[i]
     return menor 
-
+#função main do arquivo ex4
 def ex4():
+    #limpar a tela no windows e no linux
     try:
         os.system('cls')
     except:
@@ -35,6 +38,7 @@ uma função e o menor número através de outra função.\n
     resp = []
     resp.append(input('Digite um número: '))
     for i in range(0, 2):
+        #limpar a tela no windows e no linux
         try:
             os.system('cls')
         except:
@@ -46,6 +50,7 @@ uma função e o menor número através de outra função.\n
     """
     )
         resp.append(input('Digite um número: '))
+    #limpar a tela no windows e no linux
     try:
         os.system('cls')
     except:
@@ -54,8 +59,10 @@ uma função e o menor número através de outra função.\n
     print(f'O maior número Digitado é {maior(resp)}')  
     print(f'O menor número Digitado é {menor(resp)}')
     input()
+    #retorna ao painel principal em main ou retorna ao código que acabou de executar
     resp = 0
     while resp != '1' and resp != '2':
+        #limpar a tela no windows e no linux
         try:
             os.system('cls')
         except:

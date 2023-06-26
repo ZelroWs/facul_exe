@@ -1,4 +1,6 @@
+#importando a biblioteca os
 import os
+#var que recebe o nome do arquivo
 nome_arquivo = os.path.basename(__file__)
 
 #função que recebe os dados
@@ -27,8 +29,9 @@ def calcular(segundos=0, minutos=0, horas=0, dias=0):
 #iniciar o código
 if __name__ == '__main__':
     print(f'\nVocê trabalhou {painel()} segundos.')
-#função para chamar o código
+#função main do arquivo ex1
 def ex1():
+    #limpar a tela no windows e no linux
     try:
         os.system('cls')
     except:
@@ -42,8 +45,10 @@ def ex1():
 
     print(f'\nVocê trabalhou {painel()} segundos.')
     input()
+    #retorna ao painel principal em main ou retorna ao código que acabou de executar
     resp = 0
     while resp != '1' and resp != '2':
+        #limpar a tela no windows e no linux
         try:
             os.system('cls')
         except:

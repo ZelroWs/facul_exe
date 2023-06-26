@@ -1,7 +1,9 @@
+#importando a biblioteca os
 import os
+#var que recebe o nome do arquivo
 nome_arquivo = os.path.basename(__file__)
 
-
+#função que calcula o aumento do salário
 def calculo_aumento(sal):
     salario = sal
     salario = float(salario)
@@ -10,8 +12,9 @@ def calculo_aumento(sal):
         return f'Com um salário de R${salario:.2f} seu aumento é de R${aumento:.2f}, totalizando: R${(salario + aumento):.2f}'
     aumento = (salario / 100) * 15
     return f'Com um salário de R${salario:.2f} seu aumento é de R${aumento:.2f}, totalizando: R${(salario + aumento):.2f}'
-
+#função main do arquivo ex2
 def ex2():
+    #limpar a tela no windows e no linux
     try:
         os.system('cls')
     except:
@@ -28,7 +31,9 @@ iguais, de 15%.\n
     print(f'\n{calculo_aumento(salario)}')
     input()
     resp = 0
+    #retorna ao painel principal em main ou retorna ao código que acabou de executar
     while resp != '1' and resp != '2':
+        #limpar a tela no windows e no linux
         try:
             os.system('cls')
         except:
