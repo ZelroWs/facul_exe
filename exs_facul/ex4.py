@@ -13,15 +13,17 @@ def maior(lista):
                 maior = lista[i]
         return maior 
     except:
-        input('Digite apenas números amigo :(\n')
-        return ex4()
+        return ':('
 def menor(lista):
-    menor = float(lista[0])
-    for i in range(0, len(lista)):
-        menor = float(menor)
-        if float(lista[i]) < menor:
-            menor = lista[i]
-    return menor 
+    try:
+        menor = float(lista[0])
+        for i in range(0, len(lista)):
+            menor = float(menor)
+            if float(lista[i]) < menor:
+                menor = lista[i]
+        return menor 
+    except:
+        return ':('
 #função main do arquivo ex4
 def ex4():
     #limpar a tela no windows e no linux
@@ -56,6 +58,12 @@ uma função e o menor número através de outra função.\n
     except:
         os.system('clear')
     print(resp)
+    if maior(resp) == ':(':
+        input('Digite apenas números amigo :(\n')
+        return ex4()
+    elif menor(resp) == ':(':
+        input('Digite apenas números amigo :(\n')
+        return ex4()
     print(f'O maior número Digitado é {maior(resp)}')  
     print(f'O menor número Digitado é {menor(resp)}')
     input()
